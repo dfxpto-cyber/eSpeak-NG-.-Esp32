@@ -1,0 +1,13 @@
+# O exemplo foi testado no ESP32-S3; deve funcionar noutros ESP32 com 4 MB de flash.
+CONFIG_IDF_TARGET="esp32s3"
+CONFIG_ESPTOOLPY_FLASHSIZE_4MB=y
+CONFIG_PARTITION_TABLE_CUSTOM=y
+CONFIG_PARTITION_TABLE_CUSTOM_FILENAME="partitions.csv"
+CONFIG_COMPILER_OPTIMIZATION_PERF=y
+
+# Sem PSRAM, o eSpeak usa ~150 KB de RAM interna (cabe no ESP32-S3).
+# Com PSRAM (por exemplo ESP32-S3-WROOM-1 N16R8), descomente as linhas abaixo
+# para pôr a RAM estática do eSpeak e a pilha da tarefa na PSRAM:
+# CONFIG_SPIRAM=y
+# CONFIG_SPIRAM_MODE_OCT=y
+# CONFIG_SPIRAM_ALLOW_BSS_SEG_EXTERNAL_MEMORY=y

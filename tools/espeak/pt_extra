@@ -1,0 +1,8 @@
+// Pronúncias acrescentadas ao dicionário português (compiladas com o pt_dict).
+// Formato: palavra <tab> fonemas do eSpeak (ver espeak-ng -x).
+wifi		w'aIf'aI
+iphone		'aIf'ony
+ipad		'aIp'Ad
+bluetooth	bl'utuf
+(wi fi)		w'aIf'aI
+(i phone)		'aIf'ony

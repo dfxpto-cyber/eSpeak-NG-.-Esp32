@@ -1,0 +1,8 @@
+# Cabe numa flash de 4 MB.
+# Name,   Type, SubType, Offset,   Size,     Flags
+nvs,      data, nvs,     0x9000,   0x6000,
+phy_init, data, phy,     0xf000,   0x1000,
+factory,  app,  factory, 0x10000,  0x200000,
+# Dados da voz do eSpeak NG (data/espeak-pt.bin, ~810 KB), lidos directamente da flash.
+# O pacote português com os timbres cabe em 1 MB; com mais idiomas, aumente o tamanho.
+espeak,   data, 0x40,    0x210000, 0x100000,

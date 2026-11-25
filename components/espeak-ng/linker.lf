@@ -1,0 +1,9 @@
+# A RAM estática do eSpeak (~150 KB: tabelas de fonemas, listas, buffers)
+# vai para a PSRAM, para não tirar RAM interna ao Wi-Fi, BLE e câmara.
+# Requer CONFIG_SPIRAM_ALLOW_BSS_SEG_EXTERNAL_MEMORY=y (sdkconfig.defaults).
+# (o esquema extram_bss é definido pelo esp_wifi)
+[mapping:espeak_ng_psram]
+archive: libespeak-ng.a
+entries:
+    if ESP_ALLOW_BSS_SEG_EXTERNAL_MEMORY = y:
+        * (extram_bss)

@@ -1,0 +1,16 @@
+menu "Exemplo eSpeak: pinos do I2S"
+    config EXEMPLO_I2S_BCLK
+        int "Pino BCLK"
+        default 5
+    config EXEMPLO_I2S_WS
+        int "Pino WS (LRC)"
+        default 6
+    config EXEMPLO_I2S_DOUT
+        int "Pino DOUT (DIN do amplificador)"
+        default 7
+    config EXEMPLO_TAXA
+        int "Taxa de saída em Hz"
+        default 16000
+        help
+            22050 entrega o áudio do eSpeak sem conversão.
+endmenu
